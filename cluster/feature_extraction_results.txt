@@ -1,0 +1,84 @@
+--- CLUSTER FEATURE EXTRACTION (NO LABELING) ---
+Loaded 645 records from blind_clustering_final.xlsx.
+
+================================================================================
+                    METHOD 1: STATISTICAL IMPORTANCE (ANOVA)                    
+================================================================================
+Which variables distinguish the clusters the most?
+Rank  | Feature                        | F-Score (Importance) | P-Value
+---------------------------------------------------------------------------
+7     | [SumScore_FOMO_Reaction]       | 1322.06 ***   | 0.0000
+1     | [SumScore_Work_Check]          | 119.04 ***   | 0.0000
+13    | [SumScore_Control_Time]        | 100.06 ***   | 0.0000
+5     | [SumScore_Obsess_Debate]       | 85.06 ***   | 0.0000
+3     | [SumScore_Sleep_Loss]          | 80.34 ***   | 0.0000
+8     | [SumScore_Fatigue]             | 77.28 ***   | 0.0000
+9     | [SumScore_Escapism]            | 73.75 ***   | 0.0000
+4     | [SumScore_Obsess_Loop]         | 72.88 ***   | 0.0000
+6     | [SumScore_Obsess_Celeb]        | 72.86 ***   | 0.0000
+15    | [SumScore_AI_Trust]            | 20.83 ***   | 0.0000
+16    | [SumScore_AI_Freq]             | 16.36 ***   | 0.0000
+12    | [SumScore_Crowd_Pressure]      | 13.60 ***   | 0.0000
+10    | [SumScore_Deepfake_Detect]     | 12.40 ***   | 0.0000
+11    | [SumScore_Deep_Reading]        | 5.08 **    | 0.0065
+14    | [SumScore_Clickbait_Aware]     | 2.92 *     | 0.0548
+2     | [SumScore_Source_Check]        | 1.89 *     | 0.1514
+Note: *** p < 0.001 (Highly Significant difference between clusters)
+
+================================================================================
+                  METHOD 2: DECISION RULES (Identifying Logic)                  
+================================================================================
+Simplest rules to classify a user into a cluster:
+|--- [SumScore_FOMO_Reaction] <= 2.50
+|   |--- [SumScore_AI_Freq] <= 1.50
+|   |   |--- class: 0
+|   |--- [SumScore_AI_Freq] >  1.50
+|   |   |--- [SumScore_Obsess_Debate] <= 1.50
+|   |   |   |--- class: 2
+|   |   |--- [SumScore_Obsess_Debate] >  1.50
+|   |   |   |--- class: 2
+|--- [SumScore_FOMO_Reaction] >  2.50
+|   |--- [SumScore_Work_Check] <= 3.50
+|   |   |--- [SumScore_Sleep_Loss] <= 3.50
+|   |   |   |--- class: 0
+|   |   |--- [SumScore_Sleep_Loss] >  3.50
+|   |   |   |--- class: 1
+|   |--- [SumScore_Work_Check] >  3.50
+|   |   |--- [SumScore_Fatigue] <= 2.50
+|   |   |   |--- class: 0
+|   |   |--- [SumScore_Fatigue] >  2.50
+|   |   |   |--- class: 1
+
+
+================================================================================
+                          METHOD 3: DISTINCTIVE RANGES                          
+================================================================================
+
+Feature: [SumScore_FOMO_Reaction]
+Global Mean: 2.83
+----------------------------------------
+                mean       std  min  max
+Cluster_ID                              
+0           2.965649  0.182478    2    3
+1           2.987382  0.111797    2    3
+2           1.560606  0.500117    1    2
+
+Feature: [SumScore_Work_Check]
+Global Mean: 3.28
+----------------------------------------
+                mean       std  min  max
+Cluster_ID                              
+0           2.622137  0.917250    1    4
+1           3.779180  0.839195    1    5
+2           3.515152  1.153489    1    5
+
+Feature: [SumScore_Control_Time]
+Global Mean: 3.31
+----------------------------------------
+                mean       std  min  max
+Cluster_ID                              
+0           2.732824  0.904009    1    5
+1           3.766562  0.796999    1    5
+2           3.454545  1.125670    1    5
+
+Analysis Complete. Results saved to 'feature_extraction_results.txt'.

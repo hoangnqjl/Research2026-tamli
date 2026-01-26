@@ -38,7 +38,6 @@ feature_cols = [
     '[SumScore_Clickbait_Aware]',
     '[SumScore_AI_Trust]',
     '[SumScore_AI_Freq]',
-    '[SumBeh_Study_Score]'
 ]
 
 # Check columns
@@ -69,8 +68,7 @@ plt.xlabel('So luong cum (k)', fontsize=12)
 plt.ylabel('WCSS', fontsize=12)
 plt.xticks(K_range)
 plt.grid(True)
-plt.annotate('Elbow Point (k=3)', xy=(3, wcss[2]), xytext=(4, wcss[2]+500),
-             arrowprops=dict(facecolor='red', shrink=0.05))
+# plt.annotate('Elbow Point (k=3)', xy=(3, wcss[2]), xytext=(4, wcss[2]+500), arrowprops=dict(facecolor='red', shrink=0.05))
 plt.savefig('elbow_diagram.png', dpi=300)
 print("-> Saved Elbow Diagram to: elbow_diagram.png")
 

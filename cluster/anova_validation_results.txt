@@ -1,0 +1,42 @@
+--- CLUSTER VALIDATION: ONE-WAY ANOVA ---
+Objective: Prove that cluster differences are statistically significant (p < 0.05).
+Loaded data successfully.
+
+====================================================================================================
+                                         ANOVA TEST RESULTS                                         
+====================================================================================================
+Feature                        | F-Statistic  | P-Value      | Conclusion          
+----------------------------------------------------------------------------------------------------
+[SumScore_Work_Check]          | 119.04       | 1.07e-44     | Highly Significant
+[SumScore_Source_Check]        | 1.89         | 1.51e-01     | Not Significant
+[SumScore_Sleep_Loss]          | 80.34        | 7.27e-32     | Highly Significant
+[SumScore_Obsess_Loop]         | 72.88        | 3.01e-29     | Highly Significant
+[SumScore_Obsess_Debate]       | 85.06        | 1.70e-33     | Highly Significant
+[SumScore_Obsess_Celeb]        | 72.86        | 3.05e-29     | Highly Significant
+[SumScore_FOMO_Reaction]       | 1322.06      | 2.31e-228    | Highly Significant
+[SumScore_Fatigue]             | 77.28        | 8.49e-31     | Highly Significant
+[SumScore_Escapism]            | 73.75        | 1.48e-29     | Highly Significant
+[SumScore_Deepfake_Detect]     | 12.40        | 5.21e-06     | Highly Significant
+[SumScore_Deep_Reading]        | 5.08         | 6.48e-03     | Significant
+[SumScore_Crowd_Pressure]      | 13.60        | 1.64e-06     | Highly Significant
+[SumScore_Control_Time]        | 100.06       | 1.50e-38     | Highly Significant
+[SumScore_Clickbait_Aware]     | 2.92         | 5.48e-02     | Not Significant
+[SumScore_AI_Trust]            | 20.83        | 1.72e-09     | Highly Significant
+[SumScore_AI_Freq]             | 16.36        | 1.17e-07     | Highly Significant
+
+====================================================================================================
+                                     SCIENTIFIC INTERPRETATION                                      
+====================================================================================================
+
+TOP 5 KEY DIFFERENTIATORS (Variables that best define the clusters):
+1. [SumScore_FOMO_Reaction] (F=1322.1, p=2.31e-228)
+2. [SumScore_Work_Check] (F=119.0, p=1.07e-44)
+3. [SumScore_Control_Time] (F=100.1, p=1.50e-38)
+4. [SumScore_Obsess_Debate] (F=85.1, p=1.70e-33)
+5. [SumScore_Sleep_Loss] (F=80.3, p=7.27e-32)
+
+ -> These variables are the 'Fingerprints' of your clusters.
+ -> High F-statistic means the Between-Group variance is much larger than Within-Group variance.
+ -> This scientifically proves that your clusters are distinct and not random.
+
+Analysis Complete. Results saved to 'anova_validation_results.txt'.

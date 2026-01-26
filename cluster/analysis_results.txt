@@ -1,0 +1,121 @@
+--- BLIND CLUSTERING & ANALYSIS (16 VARIABLES) ---
+Loaded ../../Data.xlsx successfully.
+
+================================================================================
+                        CLUSTERING RESULT SUMMARY (K=3)                         
+================================================================================
+Total Samples: 645
+----------------------------------------
+Cluster ID      | Count      | Percentage
+----------------------------------------
+Cluster 0       | 262        | 40.6%
+Cluster 1       | 317        | 49.1%
+Cluster 2       | 66         | 10.2%
+
+================================================================================
+                    DISTINCTIVE FEATURES (Z-Score Analysis)                     
+================================================================================
+Note: Features with |Z-Score| > 0.5 are considered 'Distinctive'.
+      (+) means Higher than Average, (-) means Lower than Average.
+
+>>> CLUSTER 0 (n=262, 40.6%)
+------------------------------------------------------------
+
+  [-] LACKING (Thấp hơn TB):
+      - [SumScore_Work_Check]         : Z = -0.62
+      - [SumScore_Control_Time]       : Z = -0.58
+      - [SumScore_Fatigue]            : Z = -0.53
+      - [SumScore_Sleep_Loss]         : Z = -0.53
+      - [SumScore_Obsess_Celeb]       : Z = -0.52
+      - [SumScore_Obsess_Loop]        : Z = -0.51
+
+>>> CLUSTER 1 (n=317, 49.1%)
+------------------------------------------------------------
+  (No strongly distinctive features found with |Z| > 0.5)
+  Checking smaller differences (> 0.2)...
+[SumScore_Work_Check]       0.47
+[SumScore_Control_Time]     0.45
+[SumScore_Escapism]         0.42
+[SumScore_Sleep_Loss]       0.41
+[SumScore_Fatigue]          0.40
+[SumScore_Obsess_Celeb]     0.32
+[SumScore_FOMO_Reaction]    0.32
+[SumScore_Obsess_Loop]      0.31
+[SumScore_AI_Freq]          0.21
+Name: 1, dtype: float64
+
+>>> CLUSTER 2 (n=66, 10.2%)
+------------------------------------------------------------
+  [+] PROMINENT (Cao hơn TB):
+      - [SumScore_Obsess_Debate]      : Z = +1.1
+      - [SumScore_Obsess_Loop]        : Z = +0.54
+
+  [-] LACKING (Thấp hơn TB):
+      - [SumScore_FOMO_Reaction]      : Z = -2.66
+      - [SumScore_AI_Trust]           : Z = -0.72
+      - [SumScore_Crowd_Pressure]     : Z = -0.52
+
+================================================================================
+                                DETAILED TABLES                                 
+================================================================================
+
+--- GLOBAL MEANS (Nền) ---
+[SumScore_Work_Check]         3.28
+[SumScore_Source_Check]       1.67
+[SumScore_Sleep_Loss]         3.36
+[SumScore_Obsess_Loop]        2.20
+[SumScore_Obsess_Debate]      1.63
+[SumScore_Obsess_Celeb]       2.33
+[SumScore_FOMO_Reaction]      2.83
+[SumScore_Fatigue]            2.73
+[SumScore_Escapism]           3.38
+[SumScore_Deepfake_Detect]    2.83
+[SumScore_Deep_Reading]       1.39
+[SumScore_Crowd_Pressure]     3.24
+[SumScore_Control_Time]       3.31
+[SumScore_Clickbait_Aware]    1.86
+[SumScore_AI_Trust]           2.41
+[SumScore_AI_Freq]            2.86
+dtype: float64
+
+--- RAW CLUSTER MEANS (Giá trị thực) ---
+Cluster_ID                     0     1     2
+[SumScore_Work_Check]       2.62  3.78  3.52
+[SumScore_Source_Check]     1.54  1.72  1.91
+[SumScore_Sleep_Loss]       2.75  3.84  3.52
+[SumScore_Obsess_Loop]      1.73  2.49  2.70
+[SumScore_Obsess_Debate]    1.26  1.74  2.58
+[SumScore_Obsess_Celeb]     1.86  2.63  2.79
+[SumScore_FOMO_Reaction]    2.97  2.99  1.56
+[SumScore_Fatigue]          2.27  3.07  2.88
+[SumScore_Escapism]         2.81  3.86  3.33
+[SumScore_Deepfake_Detect]  2.98  2.79  2.42
+[SumScore_Deep_Reading]     1.55  1.26  1.33
+[SumScore_Crowd_Pressure]   3.44  3.19  2.62
+[SumScore_Control_Time]     2.73  3.77  3.45
+[SumScore_Clickbait_Aware]  1.67  1.98  2.06
+[SumScore_AI_Trust]         2.44  2.48  1.94
+[SumScore_AI_Freq]          2.65  3.03  2.89
+
+--- Z-SCORES (Độ lệch chuẩn) ---
+Cluster_ID                     0     1     2
+[SumScore_Work_Check]      -0.62  0.47  0.22
+[SumScore_Source_Check]    -0.08  0.03  0.16
+[SumScore_Sleep_Loss]      -0.53  0.41  0.13
+[SumScore_Obsess_Loop]     -0.51  0.31  0.54
+[SumScore_Obsess_Debate]   -0.43  0.13  1.10
+[SumScore_Obsess_Celeb]    -0.52  0.32  0.49
+[SumScore_FOMO_Reaction]    0.28  0.32 -2.66
+[SumScore_Fatigue]         -0.53  0.40  0.18
+[SumScore_Escapism]        -0.50  0.42 -0.04
+[SumScore_Deepfake_Detect]  0.18 -0.05 -0.48
+[SumScore_Deep_Reading]     0.15 -0.11 -0.05
+[SumScore_Crowd_Pressure]   0.17 -0.04 -0.52
+[SumScore_Control_Time]    -0.58  0.45  0.14
+[SumScore_Clickbait_Aware] -0.11  0.07  0.12
+[SumScore_AI_Trust]         0.04  0.11 -0.72
+[SumScore_AI_Freq]         -0.26  0.21  0.04
+
+[INFO] Extracting full report to blind_clustering_final.xlsx...
+-> Export successful!
+Analysis Complete.
