@@ -1,0 +1,106 @@
+--- ITERATIVE PCA ANALYSIS (NOISE EVALUATION) ---
+Objective: Visualize cluster separability (noise) as we increase features from 7 to 16.
+Loaded 645 samples.
+
+[Ranking Features by F-Statistic...]
+Feature Order:
+1. [SumScore_FOMO_Reaction] (F=1322.1)
+2. [SumScore_Work_Check] (F=119.0)
+3. [SumScore_Control_Time] (F=100.1)
+4. [SumScore_Obsess_Debate] (F=85.1)
+5. [SumScore_Sleep_Loss] (F=80.3)
+6. [SumScore_Fatigue] (F=77.3)
+7. [SumScore_Escapism] (F=73.7)
+8. [SumScore_Obsess_Loop] (F=72.9)
+9. [SumScore_Obsess_Celeb] (F=72.9)
+10. [SumScore_AI_Trust] (F=20.8)
+11. [SumScore_AI_Freq] (F=16.4)
+12. [SumScore_Crowd_Pressure] (F=13.6)
+13. [SumScore_Deepfake_Detect] (F=12.4)
+14. [SumScore_Deep_Reading] (F=5.1)
+15. [SumScore_Clickbait_Aware] (F=2.9)
+16. [SumScore_Source_Check] (F=1.9)
+
+[Starting Iterative Analysis]
+
+>>> Analyzing with Top 1 Features...
+   Explained Variance: 100.00%
+   Silhouette Score: 0.109
+   -> Saved: pca_noise_analysis_1_features.png
+
+>>> Analyzing with Top 2 Features...
+   Explained Variance: 100.00%
+   Silhouette Score: 0.243
+   -> Saved: pca_noise_analysis_2_features.png
+
+>>> Analyzing with Top 3 Features...
+   Explained Variance: 82.77%
+   Silhouette Score: 0.277
+   -> Saved: pca_noise_analysis_3_features.png
+
+>>> Analyzing with Top 4 Features...
+   Explained Variance: 70.52%
+   Silhouette Score: 0.254
+   -> Saved: pca_noise_analysis_4_features.png
+
+>>> Analyzing with Top 5 Features...
+   Explained Variance: 62.08%
+   Silhouette Score: 0.295
+   -> Saved: pca_noise_analysis_5_features.png
+
+>>> Analyzing with Top 6 Features...
+   Explained Variance: 56.52%
+   Silhouette Score: 0.325
+   -> Saved: pca_noise_analysis_6_features.png
+
+>>> Analyzing with Top 7 Features...
+   Explained Variance: 52.59%
+   Silhouette Score: 0.347
+   -> Saved: pca_noise_analysis_7_features.png
+
+>>> Analyzing with Top 8 Features...
+   Explained Variance: 49.36%
+   Silhouette Score: 0.340
+   -> Saved: pca_noise_analysis_8_features.png
+
+>>> Analyzing with Top 9 Features...
+   Explained Variance: 47.33%
+   Silhouette Score: 0.325
+   -> Saved: pca_noise_analysis_9_features.png
+
+>>> Analyzing with Top 10 Features...
+   Explained Variance: 43.21%
+   Silhouette Score: 0.348
+   -> Saved: pca_noise_analysis_10_features.png
+
+>>> Analyzing with Top 11 Features...
+   Explained Variance: 39.98%
+   Silhouette Score: 0.356
+   -> Saved: pca_noise_analysis_11_features.png
+
+>>> Analyzing with Top 12 Features...
+   Explained Variance: 37.02%
+   Silhouette Score: 0.366
+   -> Saved: pca_noise_analysis_12_features.png
+
+>>> Analyzing with Top 13 Features...
+   Explained Variance: 34.63%
+   Silhouette Score: 0.369
+   -> Saved: pca_noise_analysis_13_features.png
+
+>>> Analyzing with Top 14 Features...
+   Explained Variance: 32.36%
+   Silhouette Score: 0.369
+   -> Saved: pca_noise_analysis_14_features.png
+
+>>> Analyzing with Top 15 Features...
+   Explained Variance: 30.22%
+   Silhouette Score: 0.369
+   -> Saved: pca_noise_analysis_15_features.png
+
+>>> Analyzing with Top 16 Features...
+   Explained Variance: 28.41%
+   Silhouette Score: 0.367
+   -> Saved: pca_noise_analysis_16_features.png
+
+Analysis Complete. Check 'outputs/' for images.
